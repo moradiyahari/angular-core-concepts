@@ -15,11 +15,9 @@ import { ViewChildComponent } from './view-child/view-child';
 import { DemoComponent } from './view-child/demo.component';
 import { ViewChildrenComponent } from './view-children/view-children';
 import { ContentChildComponent } from './content-child/content-child';
-import {
-  ContentChildrenComponent,
-  Tab,
-  Pane,
-} from './content-children/content-children';
+import { ContentChildrenComponent } from './content-children/content-children';
+import { Tab } from './content-children/tab/tab.component';
+import { Pane } from './content-children/pane/pane.directive';
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
