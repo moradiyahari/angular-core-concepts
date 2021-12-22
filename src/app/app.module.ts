@@ -10,9 +10,6 @@ import {
 } from './services/http-interceptor.service';
 import { PasswordService } from './services/password.service';
 
-import { CustomPreloadingStrategyService } from './services/custom-preloading-strategy.service';
-import { NetworkAwarePreloadingStrategyService } from './services/network-aware-preloading-strategy.service';
-
 import { AppComponent } from './app.component';
 import { MyNgTemplateComponent } from './my-ng-template/my-ng-template';
 import { MyNgTemplateOutletComponent } from './my-ng-template-outlet/my-ng-template-outlet';

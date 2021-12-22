@@ -35,3 +35,9 @@ const appRoutes: Routes = [
 })
 export class AppRoutingModule {
 }
+
+/*
+import { CustomPreloadingStrategyService } from './services/custom-preloading-strategy.service';
+import { NetworkAwarePreloadingStrategyService } from './services/network-aware-preloading-strategy.service';
+
+*/
