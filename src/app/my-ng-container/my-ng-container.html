@@ -1,0 +1,36 @@
+<h2>Conditional check with ng-container</h2>
+<ng-container *ngIf="true">
+  <div>Div 1</div>
+</ng-container>
+
+<br />
+<br />
+
+<h2>Loop over ng-container use</h2>
+<!-- <div *ngFor="let item of items; let i=index; let odd=odd; trackBy: trackById" [class.odd]="odd">
+({{i}}) {{item.name}}
+</div> -->
+<ng-container *ngFor="let item of items; let i=index; let odd=odd; trackBy: trackById">
+  <div [class.odd]="odd">
+    ({{i}}) {{item.name}}
+  </div>
+</ng-container>
+
+<br />
+<br />
+
+
+<h2>Simple use of ng-container with *ngTemplateOutlet</h2>
+<ng-container *ngTemplateOutlet="template1">This text is not displayed</ng-container>
+<ng-template #template1>
+  <p>This is our template. It will be displayed without div</p>
+</ng-template>
+
+<br />
+<br />
+
+<h2>Simple use of ng-container with *ngTemplateOutlet and pass context</h2>
+<ng-container *ngTemplateOutlet="messageTemplate; context:{value:100}"></ng-container>
+<ng-template let-value="value" #messageTemplate>
+  <p>Value Received from the Parent is {{value}}</p>
+</ng-template>
