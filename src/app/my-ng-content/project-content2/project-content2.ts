@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ContentChild, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'project-content2',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./project-content2.css'],
 })
 export class ProjectContent2Component {
-  constructor() {}
+  @ContentChild('header') projectContentHeader: ElementRef;
+
+  constructor(private renderor: Renderer2) {
+    console.log('ProjectContent2', 'constructor', this.projectContentHeader);
+  }
 }
