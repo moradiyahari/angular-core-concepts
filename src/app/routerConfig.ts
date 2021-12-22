@@ -1,6 +1,9 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
+import { CustomPreloadingStrategyService } from './services/custom-preloading-strategy.service';
+import { NetworkAwarePreloadingStrategyService } from './services/network-aware-preloading-strategy.service';
+
 import { MyNgTemplateComponent } from './my-ng-template/my-ng-template';
 import { MyNgTemplateOutletComponent } from './my-ng-template-outlet/my-ng-template-outlet';
 import { MyNgContainerComponent } from './my-ng-container/my-ng-container';
@@ -11,7 +14,7 @@ import { ViewChildrenComponent } from './view-children/view-children';
 import { ContentChildComponent } from './content-child/content-child';
 import { ContentChildrenComponent } from './content-children/content-children';
 
-const appRoutes: Routes = [
+const routes: Routes = [
   { path: 'ng-template', component: MyNgTemplateComponent },
   {
     path: 'ng-template-outlet',
@@ -30,14 +33,9 @@ const appRoutes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: NetworkAwarePreloadingStrategyService})],
+  // imports: [RouterModule.forRoot(routes, {preloadingStrategy: CustomPreloadingStrategyService})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
 }
-
-/*
-import { CustomPreloadingStrategyService } from './services/custom-preloading-strategy.service';
-import { NetworkAwarePreloadingStrategyService } from './services/network-aware-preloading-strategy.service';
-
-*/
