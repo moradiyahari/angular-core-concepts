@@ -5,11 +5,23 @@
         &lt;ng-template&gt;
       </a>
     </li>
-    <li><a routerLink="ng-template-outlet">*ngTemplateOutlet</a></li>
-    <li><a routerLink="ng-container">&lt;ng-container&gt;</a></li>
-    <li><a routerLink="ng-content">&lt;ng-content&gt;</a></li>
+    <li>
+      <a routerLink="ng-template-outlet" routerLinkActive="active">
+        *ngTemplateOutlet
+      </a>
+    </li>
+    <li>
+      <a routerLink="ng-container" routerLinkActive="active">
+        &lt;ng-container&gt;
+      </a>
+    </li>
+    <li>
+      <a routerLink="ng-content" routerLinkActive="active">
+        &lt;ng-content&gt;
+      </a>
+    </li>
   </ul>
 </div>
-<div>
+<div class="container">
   <router-outlet></router-outlet>
 </div>

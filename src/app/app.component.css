@@ -7,6 +7,10 @@ h1 {
 .navbar {
   display: flex;
 }
+.container{
+  padding: 10px;
+  border: 3px double black;
+}
 .buttons li {
   float: left;
   list-style: none;
@@ -23,7 +27,7 @@ h1 {
   display: block;
 }
 
-.buttons li a:hover {
+.buttons li a.active {
   text-decoration: none;
   color: #000000;
   background-color: #33b5e5;
