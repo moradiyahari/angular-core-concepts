@@ -4,7 +4,10 @@ p {
 h1 {
   color: navy;
 }
-#buttons li {
+.navbar {
+  display: flex;
+}
+.buttons li {
   float: left;
   list-style: none;
   text-align: center;
@@ -14,13 +17,13 @@ h1 {
   width: 150px;
   line-height: 60px;
 }
-#buttons li a {
+.buttons li a {
   text-decoration: none;
   color: #ffffff;
   display: block;
 }
 
-#buttons li a:hover {
+.buttons li a:hover {
   text-decoration: none;
   color: #000000;
   background-color: #33b5e5;
