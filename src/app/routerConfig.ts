@@ -1,4 +1,6 @@
-import { Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+
 import { MyNgTemplateComponent } from './my-ng-template/my-ng-template';
 import { MyNgTemplateOutletComponent } from './my-ng-template-outlet/my-ng-template-outlet';
 import { MyNgContainerComponent } from './my-ng-container/my-ng-container';
@@ -8,7 +10,8 @@ import { ViewChildComponent } from './view-child/view-child';
 import { ViewChildrenComponent } from './view-children/view-children';
 import { ContentChildComponent } from './content-child/content-child';
 import { ContentChildrenComponent } from './content-children/content-children';
-export const appRoutes: Routes = [
+
+const appRoutes: Routes = [
   { path: 'ng-template', component: MyNgTemplateComponent },
   {
     path: 'ng-template-outlet',
@@ -23,3 +26,12 @@ export const appRoutes: Routes = [
   { path: '', redirectTo: '/ng-template', pathMatch: 'full' },
   { path: '**', component: MyNgTemplateComponent },
 ];
+
+
+
+@NgModule({
+  imports: [RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {
+}

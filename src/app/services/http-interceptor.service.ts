@@ -115,6 +115,7 @@ export class HttpInterceptorService implements HttpInterceptor {
       return next.handle(this.addToken(request)).pipe(
         timeout(timeoutValueNumeric),
         tap((response: HttpResponse<any>) => {
+          //Check response type is Authorization then set token in session
           if (response.type) {
             const token = response.headers.get('Authorization');
             if (token) {

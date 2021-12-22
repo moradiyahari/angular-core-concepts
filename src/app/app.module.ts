@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { appRoutes } from './routerConfig';
+import { AppRoutingModule } from './routerConfig';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {
@@ -10,6 +9,9 @@ import {
   HttpInterceptorService,
 } from './services/http-interceptor.service';
 import { PasswordService } from './services/password.service';
+
+import { CustomPreloadingStrategyService } from './services/custom-preloading-strategy.service';
+import { NetworkAwarePreloadingStrategyService } from './services/network-aware-preloading-strategy.service';
 
 import { AppComponent } from './app.component';
 import { MyNgTemplateComponent } from './my-ng-template/my-ng-template';
@@ -29,7 +31,7 @@ import { Pane } from './content-children/pane/pane.directive';
 @NgModule({
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
     FormsModule,
     HttpClientModule,
   ],
