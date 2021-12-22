@@ -12,12 +12,13 @@ import { MyNgContentComponent } from './my-ng-content/my-ng-content';
 import { ProjectContentComponent } from './my-ng-content/project-content/project-content';
 import { ProjectContent2Component } from './my-ng-content/project-content2/project-content2';
 import { ViewChildComponent } from './view-child/view-child';
+import { DemoComponent } from './view-child/demo.component';
 import { ViewChildrenComponent } from './view-children/view-children';
 import { ContentChildComponent } from './content-child/content-child';
 import { ContentChildrenComponent } from './content-children/content-children';
 
 @NgModule({
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule ],
+  imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
   declarations: [
     AppComponent,
     MyNgTemplateComponent,
@@ -27,9 +28,10 @@ import { ContentChildrenComponent } from './content-children/content-children';
     ProjectContentComponent,
     ProjectContent2Component,
     ViewChildComponent,
+    DemoComponent,
     ViewChildrenComponent,
     ContentChildComponent,
-    ContentChildrenComponent
+    ContentChildrenComponent,
   ],
   bootstrap: [AppComponent],
 })
