@@ -1,33 +1,39 @@
-<h1>Conditional check with ng-template</h1>
+<h2>Conditional check with ng-template</h2>
 <ng-template [ngIf]="true">
   <div>Div 1</div>
 </ng-template>
 
-<br>
-<br>
+<br />
+<br />
 
-<h1>Loop over ng-template use</h1>
+<h2>Loop over ng-template use</h2>
 <!-- <div *ngFor="let item of items; let i=index; let odd=odd; trackBy: trackById" [class.odd]="odd">
 ({{i}}) {{item.name}}
 </div> -->
-<ng-template ngFor let-item [ngForOf]="items" let-i="index" let-odd="odd" [ngForTrackBy]="trackById">
-<div [class.odd]="odd">({{i}}) {{item.name}}</div>
+<ng-template
+  ngFor
+  let-item
+  [ngForOf]="items"
+  let-i="index"
+  let-odd="odd"
+  [ngForTrackBy]="trackById"
+>
+  <div [class.odd]="odd">({{i}}) {{item.name}}</div>
 </ng-template>
 
-<br>
-<br>
+<br />
+<br />
 
+<h2>Using ngTemplate with ngIf then & else</h2>
 
-<h1>Using ngTemplate with ngIf then & else</h1>
- 
 <div *ngIf="true else elseBlock1">
   <p>This is default content</p>
 </div>
 <div *ngIf="true; then thenBlock1 else elseBlock1">
-<p>This content is not shown</p>
+  <p>This content is not shown</p>
 </div>
 <div *ngIf="false; then thenBlock1 else elseBlock1">
-<p>This content is not shown</p>
+  <p>This content is not shown</p>
 </div>
 
 <ng-template #thenBlock1>
@@ -35,21 +41,4 @@
 </ng-template>
 <ng-template #elseBlock1>
   <p>content to render when selected is false.</p>
-</ng-template>
- 
-<br>
-<br>
-
-
-
-<ng-container *ngTemplateOutlet="template1">
-  This text is not displayed
-</ng-container>
-<div *ngTemplateOutlet="template1">
-</div> 
-
-<ng-container *ngTemplateOutlet="messageTemplate; context:{value:100}">
-</ng-container> 
-<ng-template let-value="value" #messageTemplate>  
-  <p>Value Received from the Parent is  {{value}}</p>
 </ng-template>

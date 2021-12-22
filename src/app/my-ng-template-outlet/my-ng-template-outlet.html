@@ -1,0 +1,14 @@
+<h2>Simple use of *ngTemplateOutlet</h2>
+<div *ngTemplateOutlet="template1">This text is not displayed</div>
+<ng-template #template1>
+  <p>This is our template. It will be displayed on the div</p>
+</ng-template>
+
+<br />
+<br />
+
+<h2>Pass contex to *ngTemplateOutlet</h2>
+<div *ngTemplateOutlet="messageTemplate; context:{value:100}"></div>
+<ng-template let-value="value" #messageTemplate>
+  <p>Value Received from the Parent is {{value}}</p>
+</ng-template>
