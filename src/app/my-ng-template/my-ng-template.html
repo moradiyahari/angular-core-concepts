@@ -13,3 +13,43 @@
 <ng-template ngFor let-item [ngForOf]="items" let-i="index" let-odd="odd" [ngForTrackBy]="trackById">
 <div [class.odd]="odd">({{i}}) {{item.name}}</div>
 </ng-template>
+
+<br>
+<br>
+
+
+<h1>Using ngTemplate with ngIf then & else</h1>
+ 
+<div *ngIf="true else elseBlock1">
+  <p>This is default content</p>
+</div>
+<div *ngIf="true; then thenBlock1 else elseBlock1">
+<p>This content is not shown</p>
+</div>
+<div *ngIf="false; then thenBlock1 else elseBlock1">
+<p>This content is not shown</p>
+</div>
+
+<ng-template #thenBlock1>
+  <p>content to render when the selected is true.</p>
+</ng-template>
+<ng-template #elseBlock1>
+  <p>content to render when selected is false.</p>
+</ng-template>
+ 
+<br>
+<br>
+
+
+
+<ng-container *ngTemplateOutlet="template1">
+  This text is not displayed
+</ng-container>
+<div *ngTemplateOutlet="template1">
+</div> 
+
+<ng-container *ngTemplateOutlet="messageTemplate; context:{value:100}">
+</ng-container> 
+<ng-template let-value="value" #messageTemplate>  
+  <p>Value Received from the Parent is  {{value}}</p>
+</ng-template>
