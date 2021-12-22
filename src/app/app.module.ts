@@ -15,7 +15,11 @@ import { ViewChildComponent } from './view-child/view-child';
 import { DemoComponent } from './view-child/demo.component';
 import { ViewChildrenComponent } from './view-children/view-children';
 import { ContentChildComponent } from './content-child/content-child';
-import { ContentChildrenComponent } from './content-children/content-children';
+import {
+  ContentChildrenComponent,
+  Tab,
+  Pane,
+} from './content-children/content-children';
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
@@ -32,6 +36,8 @@ import { ContentChildrenComponent } from './content-children/content-children';
     ViewChildrenComponent,
     ContentChildComponent,
     ContentChildrenComponent,
+    Tab,
+    Pane,
   ],
   bootstrap: [AppComponent],
 })
