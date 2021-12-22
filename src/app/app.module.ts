@@ -7,7 +7,7 @@ import { MyNgTemplateComponent } from './my-ng-template/my-ng-template';
 import { MyNgTemplateOutletComponent } from './my-ng-template-outlet/my-ng-template-outlet';
 import { MyNgContainerComponent } from './my-ng-container/my-ng-container';
 import { MyNgContentComponent } from './my-ng-content/my-ng-content';
-
+import { ProjectContentComponent } from './my-ng-content/my-ng-content/project-content';
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [
@@ -15,7 +15,8 @@ import { MyNgContentComponent } from './my-ng-content/my-ng-content';
     MyNgTemplateComponent,
     MyNgTemplateOutletComponent,
     MyNgContainerComponent,
-    MyNgContentComponent
+    MyNgContentComponent,
+    ProjectContentComponent,
   ],
   bootstrap: [AppComponent],
 })
