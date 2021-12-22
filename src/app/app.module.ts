@@ -4,6 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routerConfig';
 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {
+  DEFAULT_TIMEOUT,
+  HttpInterceptorService,
+} from './services/http-interceptor.service';
+import { PasswordService } from './services/password.service';
+
 import { AppComponent } from './app.component';
 import { MyNgTemplateComponent } from './my-ng-template/my-ng-template';
 import { MyNgTemplateOutletComponent } from './my-ng-template-outlet/my-ng-template-outlet';
@@ -20,7 +27,12 @@ import { Tab } from './content-children/tab/tab.component';
 import { Pane } from './content-children/pane/pane.directive';
 
 @NgModule({
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    HttpClientModule,
+  ],
   declarations: [
     AppComponent,
     MyNgTemplateComponent,
@@ -36,6 +48,15 @@ import { Pane } from './content-children/pane/pane.directive';
     ContentChildrenComponent,
     Tab,
     Pane,
+  ],
+  providers: [
+    PasswordService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true,
+    },
+    { provide: DEFAULT_TIMEOUT, useValue: 60000 },
   ],
   bootstrap: [AppComponent],
 })
