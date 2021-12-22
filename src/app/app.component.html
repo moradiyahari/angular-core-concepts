@@ -1,8 +1,15 @@
-
-<a routerLink="ng-template" routerLinkActive="active">&lt;ng-template&gt;</a>
-<a routerLink="ng-template-outlet">*ngTemplateOutlet</a>
-<a routerLink="ng-container">&lt;ng-container&gt;</a>
-<a routerLink="ng-content">&lt;ng-content&gt;</a>
-<br>
-
-<router-outlet></router-outlet>
+<div>
+  <ul id="buttons">
+    <li>
+      <a routerLink="ng-template" routerLinkActive="active">
+        &lt;ng-template&gt;
+      </a>
+    </li>
+    <li><a routerLink="ng-template-outlet">*ngTemplateOutlet</a></li>
+    <li><a routerLink="ng-container">&lt;ng-container&gt;</a></li>
+    <li><a routerLink="ng-content">&lt;ng-content&gt;</a></li>
+  </ul>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

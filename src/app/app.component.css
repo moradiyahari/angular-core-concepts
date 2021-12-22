@@ -1,6 +1,27 @@
 p {
   font-family: Lato;
 }
-h1{
-  color:navy;
+h1 {
+  color: navy;
+}
+#buttons li {
+  float: left;
+  list-style: none;
+  text-align: center;
+  background-color: #000000;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: 150px;
+  line-height: 60px;
+}
+#buttons li a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+}
+
+#buttons li a:hover {
+  text-decoration: none;
+  color: #000000;
+  background-color: #33b5e5;
 }
