@@ -26,7 +26,9 @@
     <tr>
       <td>
         <user-rating  label="Rating" [increment]="1" formControlName="rating"></user-rating>
-        <ng-container *ngIf="form.controls.rating.errors">{{form.controls.rating.errors | json}}</ng-container>
+        <code *ngIf="form.controls.rating.errors">
+        {{form.controls.rating.errors | json}}
+        </code>
       </td>
     </tr>
     

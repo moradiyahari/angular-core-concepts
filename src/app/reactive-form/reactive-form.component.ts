@@ -22,9 +22,9 @@ export class ReactiveFormComponent implements OnInit {
       password: [''],
       email:[''],
       userType:[''],
-      rating: [60, [Validators.required, Validators.max(10)]]
+      rating: [null, [Validators.required, Validators.max(10)]]
     }) as IUserFormGroup;
-    this.myData = { username: 'Aart',email:'test@test.com', password: 'password!', userType:'Admin',rating: 5 };
+    this.myData = { username: 'Aart',email:'test@test.com', password: 'password!', userType:'Admin',rating: null };
     this.form.patchValue(this.myData);
   }
 

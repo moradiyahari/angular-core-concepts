@@ -25,10 +25,10 @@ import {
   ],
 })
 export class UserRatingComponent implements ControlValueAccessor, Validator {
-  quantity = 0;
+  rating = 0;
   @Input() increment: number;
   @Input() label!: string;
-  onChange = (quantity) => {};
+  onChange = (rating) => {};
 
   onTouched = () => {};
 
@@ -39,21 +39,21 @@ export class UserRatingComponent implements ControlValueAccessor, Validator {
   onAdd() {
     this.markAsTouched();
     if (!this.disabled) {
-      this.quantity += this.increment;
-      this.onChange(this.quantity);
+      this.rating += this.increment;
+      this.onChange(this.rating);
     }
   }
 
   onRemove() {
     this.markAsTouched();
     if (!this.disabled) {
-      this.quantity -= this.increment;
-      this.onChange(this.quantity);
+      this.rating -= this.increment;
+      this.onChange(this.rating);
     }
   }
 
-  writeValue(quantity: number) {
-    this.quantity = quantity;
+  writeValue(rating: number) {
+    this.rating = rating;
   }
 
   registerOnChange(onChange: any) {
@@ -76,12 +76,12 @@ export class UserRatingComponent implements ControlValueAccessor, Validator {
   }
 
   validate(control: AbstractControl) {
-    const quantity = control.value;
+    const rating = control.value;
     let errors : any = {};
-    if (quantity <= 0) {
+    if (rating <= 0) {
       errors = {
         mustBePositive: {
-          quantity,
+          rating,
         },
       };
     }
