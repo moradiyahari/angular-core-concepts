@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'custom-list',
   templateUrl: './custom-list.component.html',
-  styles: ['label { width: 200px; }']
+  styles: ['.label { width: 200px; }']
 })
 export class CustomListComponent {
   @Input() form: any;
