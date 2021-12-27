@@ -2,12 +2,22 @@
 
 <ng-container *ngIf="myData">
 <form [formGroup]="form" (ngSubmit)="saveUser()">
-   
-  <custom-input id="username" type="text" label="Username" controlName="username" [form]="form"></custom-input>
-
-  <!-- <label>Password</label>
-  <input type="password" [formControl]="form.controls.password"> -->
-
-  <button type="submit">Save user</button>
+  <table>
+    <tr>
+      <td>
+        <custom-input id="txt-username" type="text" label="Username" controlName="username" [form]="form"></custom-input>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <custom-input id="txt-password" type="password" label="Password" controlName="password" [form]="form"></custom-input>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="submit">Save user</button>
+      </td>
+    </tr>
+  </table>
 </form>
 </ng-container>
