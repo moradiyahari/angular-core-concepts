@@ -19,12 +19,12 @@ export class ReactiveFormComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       username: ['',Validators.required],
-      password: ['',Validators.required],
+      password: ['',[Validators.required,Validators.pattern('^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=[^0-9]*[0-9]).{8,}$')]],
       email:['',Validators.required],
       userType:['',Validators.required],
       rating: [0, [Validators.required, Validators.max(10)]]
     }) as IUserFormGroup;
-    this.myData = { username: 'Aart',email:'test@test.com', password: 'password!', userType:'Admin',rating: 1 };
+    this.myData = { username: 'Aart',email:'test@test.com', password: 'Passw0rd', userType:'Admin',rating: 1 };
     this.form.patchValue(this.myData);
   }
 

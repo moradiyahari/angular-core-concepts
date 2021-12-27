@@ -31,7 +31,17 @@
         <ng-container *ngIf="form.controls.password.errors">
           <br/>
           <code>
-            {{form.controls.password.errors | json}}
+            <ng-container *ngIf="form.controls.password.errors.pattern" >
+              <pre>
+              At least 1 uppercase ASCII letter
+              At least 1 lowercase ASCII letter
+              At least 1 ASCII digit
+              Any 8 or more chars (other than line break chars)
+              </pre>
+            </ng-container>
+            <ng-container *ngIf="form.controls.password.errors.required">
+              {{form.controls.password.errors | json}}
+            </ng-container>
           </code>
         </ng-container>
       </td>
