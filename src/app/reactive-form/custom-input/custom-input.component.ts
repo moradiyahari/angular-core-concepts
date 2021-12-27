@@ -11,6 +11,5 @@ export class CustomInputComponent {
   @Input() id!: string;
   @Input() type!: string;
   @Input() label!: string;
-
 }
 
