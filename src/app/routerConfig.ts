@@ -13,6 +13,7 @@ import { ViewChildComponent } from './view-child/view-child';
 import { ViewChildrenComponent } from './view-children/view-children';
 import { ContentChildComponent } from './content-child/content-child';
 import { ContentChildrenComponent } from './content-children/content-children';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
   { path: 'ng-template', component: MyNgTemplateComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
         (m) => m.PreloadingStrategyModule
       ),
   },
+  {path: '', component: ReactiveFormComponent},
   { path: '', redirectTo: '/ng-template', pathMatch: 'full' },
   { path: '**', component: MyNgTemplateComponent },
 ];

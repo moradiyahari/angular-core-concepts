@@ -24,7 +24,7 @@ import { ContentChildComponent } from './content-child/content-child';
 import { ContentChildrenComponent } from './content-children/content-children';
 import { Tab } from './content-children/tab/tab.component';
 import { Pane } from './content-children/pane/pane.directive';
-import { ReactiveFormsComponent } from './reactive-form/reactive-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -47,7 +47,7 @@ import { ReactiveFormsComponent } from './reactive-form/reactive-form.component'
     ContentChildrenComponent,
     Tab,
     Pane,
-    ReactiveFormsComponent
+    ReactiveFormComponent
   ],
   providers: [
     PasswordService,
