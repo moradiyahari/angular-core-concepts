@@ -10,5 +10,7 @@ export class CustomInputComponent {
   @Input() label: string;
   @Input() type: string;
   @Input() controlName: string;
+
+  @Input() form!: FormGroup;
 }
 
