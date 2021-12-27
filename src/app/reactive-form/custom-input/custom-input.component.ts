@@ -5,7 +5,11 @@ import { Component, Input } from '@angular/core';
   templateUrl: './custom-input.component.html'
 })
 export class CustomInputComponent {
+  @Input() form: any;
   @Input() controlName: string;
-  @Input() form!: any;
+  @Input() id!: string;
+  @Input() type!: string;
+  @Input() label!: string;
+
 }
 
