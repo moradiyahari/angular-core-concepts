@@ -27,11 +27,11 @@
       <td>
         <user-rating  label="Rating" [increment]="1" formControlName="rating"></user-rating>
         <code *ngIf="form.controls.rating.errors">
-        {{form.controls.rating.errors | json}}
+          {{form.controls.rating.errors | json}}
         </code>
       </td>
     </tr>
-    
+      
     <tr>
       <td>
         <button type="submit">Save user</button>
