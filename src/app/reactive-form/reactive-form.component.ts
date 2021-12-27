@@ -12,15 +12,16 @@ import { IUserFormGroup } from './interfaces/IUserFormGroup';
 export class ReactiveFormComponent implements OnInit {
   myData: IUser;
   form: IUserFormGroup;
-
+  userTypeList = ['Admin','Staff']
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       username: [''],
-      password: ['']
+      password: [''],
+      email:['']
     }) as IUserFormGroup;
-    this.myData = { username: 'Aart', password: 'password!' };
+    this.myData = { username: 'Aart',email:'test@test.com', password: 'password!', userType:'Admin' };
     this.form.patchValue(this.myData);
   }
 

@@ -1,0 +1,5 @@
+
+<ng-container *ngIf="form.controls"> 
+  <label>{{label}}</label>
+  <input [id]="id" [formControl]="form.controls[controlName]">
+</ng-container>

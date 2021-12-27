@@ -6,5 +6,7 @@ export interface IUserFormGroup extends FormGroup {
   controls: {
     username: FormControl;
     password: FormControl;
+    email: FormControl;
+    userType: FormControl;
   };
 }

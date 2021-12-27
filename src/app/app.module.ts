@@ -26,6 +26,7 @@ import { Tab } from './content-children/tab/tab.component';
 import { Pane } from './content-children/pane/pane.directive';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { CustomInputComponent } from './reactive-form/custom-input/custom-input.component'
+import { CustomListComponent } from './reactive-form/custom-list/custom-list.component'
 
 @NgModule({
   imports: [
@@ -51,7 +52,8 @@ import { CustomInputComponent } from './reactive-form/custom-input/custom-input.
     Tab,
     Pane,
     ReactiveFormComponent,
-    CustomInputComponent
+    CustomInputComponent,
+    CustomListComponent
   ],
   providers: [
     PasswordService,
