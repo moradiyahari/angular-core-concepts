@@ -1,15 +1,6 @@
 <div class="choose-quantity">
-  <table>
-    <tr>
-      <td>
-        <i class="minus" (click)="onRemove()">-</i>
-      </td>
-      <td>
-        <i class="conter quantity">{{quantity}}</i>
-      </td>
-      <td>
-        <i class="plus" (click)="onAdd()">+</i>
-      </td>
-    </tr>
-  </table>
+    <label class="label">{{label}}</label>
+    <i class="minus" (click)="onRemove()">-</i>
+    <i class="conter quantity">{{quantity}}</i>
+    <i class="plus" (click)="onAdd()">+</i>
 </div>

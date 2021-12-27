@@ -4,14 +4,13 @@ import {
   ControlValueAccessor,
   NG_VALIDATORS,
   NG_VALUE_ACCESSOR,
-  ValidationErrors,
   Validator,
 } from '@angular/forms';
 
 @Component({
   selector: 'user-rating',
   templateUrl: 'user-rating.component.html',
-  styleUrls: ['user-rating.component.scss'],
+  styleUrls: ['user-rating.component.css'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -28,7 +27,7 @@ import {
 export class UserRatingComponent implements ControlValueAccessor, Validator {
   quantity = 0;
   @Input() increment: number;
-
+  @Input() label!: string;
   onChange = (quantity) => {};
 
   onTouched = () => {};

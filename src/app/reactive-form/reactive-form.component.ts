@@ -8,6 +8,7 @@ import { IUserFormGroup } from './interfaces/IUserFormGroup';
 @Component({
   selector: 'reactive-form',
   templateUrl: './reactive-form.component.html',
+  styles: ['td { padding:5px }']
 })
 export class ReactiveFormComponent implements OnInit {
   myData: IUser;
