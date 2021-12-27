@@ -2,11 +2,10 @@
 
 <ng-container *ngIf="myData">
 <form [formGroup]="form" (ngSubmit)="saveUser()">
-  <label>Username</label>
-  <input type="text" [formControl]="form.controls.username">
+  
 
-  <label>Password</label>
-  <input type="password" [formControl]="form.controls.password">
+  <!-- <label>Password</label>
+  <input type="password" [formControl]="form.controls.password"> -->
 
   <button type="submit">Save user</button>
 </form>
