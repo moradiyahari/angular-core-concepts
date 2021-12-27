@@ -1,27 +1,32 @@
-import { Component, Input } from "@angular/core";
-import { AbstractControl, ControlValueAccessor, NG_VALIDATORS, NG_VALUE_ACCESSOR, ValidationErrors, Validator } from "@angular/forms";
+import { Component, Input } from '@angular/core';
+import {
+  AbstractControl,
+  ControlValueAccessor,
+  NG_VALIDATORS,
+  NG_VALUE_ACCESSOR,
+  ValidationErrors,
+  Validator,
+} from '@angular/forms';
 
 @Component({
   selector: 'user-rating',
-  templateUrl: "user-rating.component.html",
-  styleUrls: ["user-rating.component.scss"],
+  templateUrl: 'user-rating.component.html',
+  styleUrls: ['user-rating.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      multi:true,
-      useExisting: UserRatingComponent
+      multi: true,
+      useExisting: UserRatingComponent,
     },
     {
       provide: NG_VALIDATORS,
       multi: true,
-      useExisting: UserRatingComponent
-    }
-  ]
+      useExisting: UserRatingComponent,
+    },
+  ],
 })
 export class UserRatingComponent implements ControlValueAccessor, Validator {
-
   quantity = 0;
-  @Input() form: any;
   @Input() increment: number;
 
   onChange = (quantity) => {};
@@ -35,7 +40,7 @@ export class UserRatingComponent implements ControlValueAccessor, Validator {
   onAdd() {
     this.markAsTouched();
     if (!this.disabled) {
-      this.quantity+= this.increment;
+      this.quantity += this.increment;
       this.onChange(this.quantity);
     }
   }
@@ -43,7 +48,7 @@ export class UserRatingComponent implements ControlValueAccessor, Validator {
   onRemove() {
     this.markAsTouched();
     if (!this.disabled) {
-      this.quantity-= this.increment;
+      this.quantity -= this.increment;
       this.onChange(this.quantity);
     }
   }
@@ -71,14 +76,16 @@ export class UserRatingComponent implements ControlValueAccessor, Validator {
     this.disabled = disabled;
   }
 
-  validate(control: AbstractControl): ValidationErrors | null {
+  validate(control: AbstractControl) {
     const quantity = control.value;
+    let errors : any = {};
     if (quantity <= 0) {
-      return {
+      errors = {
         mustBePositive: {
-          quantity
-        }
+          quantity,
+        },
       };
     }
+    return errors;
   }
 }

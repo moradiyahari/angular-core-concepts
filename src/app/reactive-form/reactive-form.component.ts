@@ -28,7 +28,11 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   saveUser(): void {
-    const userToSave: IUser = this.form.value;
-    console.log(userToSave);
+    if(this.form.valid){
+      const userToSave: IUser = this.form.value;
+      console.log(userToSave);
+    }else{
+      console.log(this.form);
+    }
   }
 }
