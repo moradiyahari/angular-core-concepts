@@ -3,7 +3,7 @@
 <ng-container *ngIf="myData">
 <form [formGroup]="form" (ngSubmit)="saveUser()">
    
-  <custom-input [id]="username" [type]="text" [label]="Username" [controlName]="'form.controls.username'"></custom-input>
+  <custom-input controlName="username" [form]="form"></custom-input>
 
   <!-- <label>Password</label>
   <input type="password" [formControl]="form.controls.password"> -->

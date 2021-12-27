@@ -1,3 +1,5 @@
 
-<label>{{label}}</label>
-<input [id]="id" [type]="type">
+<ng-container [formGroup]="form" *ngIf="form.controls"> 
+  <label>Username</label>
+  <input id="id" type="text" [formControl]="form.controls[controlName]">
+</ng-container>
