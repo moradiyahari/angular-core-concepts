@@ -19,7 +19,7 @@ export class ReactiveFormComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       username: ['',Validators.required],
-      password: ['',Validators.required,Validators.pattern('(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}')],
+      password: ['',Validators.required],
       email:['',Validators.required],
       userType:['',Validators.required],
       rating: [0, [Validators.required, Validators.max(10)]]
