@@ -20,9 +20,7 @@ export class ReactiveFormComponent implements OnInit {
       username: [''],
       password: ['']
     }) as IUserFormGroup;
-
     this.myData = { username: 'Aart', password: 'password!' };
-
     this.form.patchValue(this.myData);
   }
 
