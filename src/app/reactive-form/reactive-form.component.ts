@@ -17,8 +17,8 @@ export class ReactiveFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      username: [false],
-      password: [false]
+      username: [''],
+      password: ['']
     }) as IUserFormGroup;
 
     this.myData = { username: 'Aart', password: 'password!' };
