@@ -8,5 +8,6 @@ export interface IUserFormGroup extends FormGroup {
     password: FormControl;
     email: FormControl;
     userType: FormControl;
+    rating: FormControl;
   };
 }

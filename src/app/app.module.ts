@@ -25,8 +25,9 @@ import { ContentChildrenComponent } from './content-children/content-children';
 import { Tab } from './content-children/tab/tab.component';
 import { Pane } from './content-children/pane/pane.directive';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { CustomInputComponent } from './reactive-form/custom-input/custom-input.component'
-import { CustomListComponent } from './reactive-form/custom-list/custom-list.component'
+import { CustomInputComponent } from './reactive-form/custom-input/custom-input.component';
+import { CustomListComponent } from './reactive-form/custom-list/custom-list.component';
+import { UserRatingComponent } from './reactive-form/user-rating/user-rating.component';
 
 @NgModule({
   imports: [
@@ -53,7 +54,8 @@ import { CustomListComponent } from './reactive-form/custom-list/custom-list.com
     Pane,
     ReactiveFormComponent,
     CustomInputComponent,
-    CustomListComponent
+    CustomListComponent,
+    UserRatingComponent
   ],
   providers: [
     PasswordService,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 
 import { IUser } from './interfaces/IUser';
@@ -20,14 +20,15 @@ export class ReactiveFormComponent implements OnInit {
       username: [''],
       password: [''],
       email:[''],
-      userType:['']
+      userType:[''],
+      rating: [60, [Validators.required, Validators.max(10)]]
     }) as IUserFormGroup;
-    this.myData = { username: 'Aart',email:'test@test.com', password: 'password!', userType:'Staff' };
+    this.myData = { username: 'Aart',email:'test@test.com', password: 'password!', userType:'Admin',rating: 5 };
     this.form.patchValue(this.myData);
   }
 
   saveUser(): void {
     const userToSave: IUser = this.form.value;
-    console.log(`Username: ${userToSave.username},Password ${userToSave.password} `);
+    console.log(userToSave);
   }
 }

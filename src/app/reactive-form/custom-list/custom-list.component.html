@@ -1,11 +1,7 @@
 
 <ng-container *ngIf="form.controls"> 
   <label>{{label}}</label>
-   
-
-
   <select [id]="id" [formControl]="form.controls[controlName]">
     <option *ngFor="let item of list" [value]="item">{{item}}</option>
   </select>
-
 </ng-container>
