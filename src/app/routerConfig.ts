@@ -34,7 +34,7 @@ const routes: Routes = [
         (m) => m.PreloadingStrategyModule
       ),
   },
-  {path: '', component: ReactiveFormComponent},
+  {path: 'reactive-forms', component: ReactiveFormComponent},
   { path: '', redirectTo: '/ng-template', pathMatch: 'full' },
   { path: '**', component: MyNgTemplateComponent },
 ];
