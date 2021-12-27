@@ -6,26 +6,57 @@
     <tr>
       <td>
         <custom-input id="txt-username" type="text" label="Username" controlName="username" [form]="form"></custom-input>
+        <ng-container *ngIf="form.controls.username.errors">
+          <br/>
+          <code>
+            {{form.controls.username.errors | json}}
+          </code>
+        </ng-container>
       </td>
     </tr>
     <tr>
       <td>
         <custom-input id="txt-email" type="email" label="Email" controlName="email" [form]="form"></custom-input>
+        <ng-container *ngIf="form.controls.email.errors">
+          <br/>
+          <code>
+            {{form.controls.email.errors | json}}
+          </code>
+        </ng-container>
       </td>
     </tr>
     <tr>
       <td>
         <custom-input id="txt-password" type="password" label="Password" controlName="password" [form]="form"></custom-input>
+        <ng-container *ngIf="form.controls.password.errors">
+          <br/>
+          <code>
+            {{form.controls.password.errors | json}}
+          </code>
+        </ng-container>
       </td>
     </tr>
     <tr>
       <td>
         <custom-list id="ddl-userType" label="User Type" controlName="userType" [list]="userTypeList" [form]="form"></custom-list>
+        <ng-container *ngIf="form.controls.userType.errors">
+          <br/>
+          <code>
+            {{form.controls.userType.errors | json}}
+          </code>
+        </ng-container>
+        
       </td>
     </tr>
     <tr>
       <td>
         <user-rating label="Rating" [increment]="1" formControlName="rating"></user-rating>
+        <ng-container *ngIf="form.controls.rating.errors">
+          <br/>
+          <code>
+            {{form.controls.rating.errors | json}}
+          </code>
+        </ng-container>
       </td>
     </tr>
       
