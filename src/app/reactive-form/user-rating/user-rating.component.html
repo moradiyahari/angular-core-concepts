@@ -1,6 +1,9 @@
 <div class="choose-quantity">
-  <label class="label">{{ label }}</label>
-  <i class="minus" (click)="onRemove()">-</i>
-  <i class="conter quantity">{{ rating }}</i>
-  <i class="plus" (click)="onAdd()">+</i>
+  <label for="rating" >{{label}}</label>
+  <div class="form-control custom-class">
+    <i class="minus" (click)="onRemove()">-</i>
+    <i class="conter quantity">{{ rating }}</i>
+    <i class="plus" (click)="onAdd()">+</i>
+  </div>
+ 
 </div>

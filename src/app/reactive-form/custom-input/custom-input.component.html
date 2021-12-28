@@ -1,5 +1,5 @@
 
 <ng-container *ngIf="form.controls"> 
-  <label class="label" [for]="controlName">{{label}}</label>
+  <label [for]="controlName">{{label}}</label>
   <input class="form-control" [id]="id" [type]="type" [formControl]="form.controls[controlName]">
 </ng-container>
