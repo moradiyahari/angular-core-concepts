@@ -28,6 +28,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { CustomInputComponent } from './reactive-form/custom-input/custom-input.component';
 import { CustomListComponent } from './reactive-form/custom-list/custom-list.component';
 import { UserRatingComponent } from './reactive-form/user-rating/user-rating.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 @NgModule({
   imports: [
@@ -55,7 +56,8 @@ import { UserRatingComponent } from './reactive-form/user-rating/user-rating.com
     ReactiveFormComponent,
     CustomInputComponent,
     CustomListComponent,
-    UserRatingComponent
+    UserRatingComponent,
+    TemplateFormComponent
   ],
   providers: [
     PasswordService,

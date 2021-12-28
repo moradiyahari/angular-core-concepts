@@ -14,6 +14,7 @@ import { ViewChildrenComponent } from './view-children/view-children';
 import { ContentChildComponent } from './content-child/content-child';
 import { ContentChildrenComponent } from './content-children/content-children';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 const routes: Routes = [
   { path: 'ng-template', component: MyNgTemplateComponent },
@@ -35,6 +36,7 @@ const routes: Routes = [
       ),
   },
   {path: 'reactive-form', component: ReactiveFormComponent},
+  {path: 'template-form', component: TemplateFormComponent},
   { path: '', redirectTo: '/ng-template', pathMatch: 'full' },
   { path: '**', component: MyNgTemplateComponent },
 ];
