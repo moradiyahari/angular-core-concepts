@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 class Hero {
   constructor(
@@ -14,7 +15,6 @@ class Hero {
   templateUrl: './template-form.component.html'
 })
 export class TemplateFormComponent {
-  
   powers = ['Really Smart', 'Super Flexible',
             'Super Hot', 'Weather Changer'];
 
@@ -22,7 +22,9 @@ export class TemplateFormComponent {
 
   submitted = false;
 
-  onSubmit() { this.submitted = true; }
+  onSubmit(form:NgForm) { 
+    console.log(form)
+    this.submitted = true; }
 
 
   newHero() {

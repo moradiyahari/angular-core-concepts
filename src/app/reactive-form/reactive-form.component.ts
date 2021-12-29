@@ -13,9 +13,7 @@ export class ReactiveFormComponent implements OnInit {
   myData: IUser;
   form: IUserFormGroup;
   userTypeList = ['Admin','Staff']
-  constructor(private formBuilder: FormBuilder) { }
-
-  ngOnInit(): void {
+  constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       username: ['',Validators.required],
       password: ['',[Validators.required,Validators.pattern('^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=[^0-9]*[0-9]).{8,}$')]],
@@ -23,8 +21,13 @@ export class ReactiveFormComponent implements OnInit {
       userType:['',Validators.required],
       rating: [0, [Validators.required, Validators.max(10)]]
     }) as IUserFormGroup;
-    this.myData = { username: 'Aart',email:'test@test.com', password: 'Passw0rd', userType:'Admin',rating: 1 };
+   }
+
+  ngOnInit(): void {
+    this.myData = { username: 'Aart',email:'test@test.com', password: 'Passw0rd', userType:'Admin',rating: 0 };
+  
     this.form.patchValue(this.myData);
+    console.log(this.form);
   }
 
   saveUser(): void {
